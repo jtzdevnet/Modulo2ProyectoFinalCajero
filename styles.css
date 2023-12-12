@@ -1,0 +1,618 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #ADADAD;
+    font-family: "Arial";
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    background: #53586B;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-right: 0;
+}
+
+.left-side{
+    width: 70%;
+}
+
+.left-side .screen-wrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: #333742;
+    padding: 30px 15px 40px 15px;
+}
+
+.screen-wrap .main-screen{
+    width: 80%;
+    background: #004eff;
+    border: solid 10px black;
+    height: 450px;
+    position: relative;
+}
+
+.screen-wrap .button-column{
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    width: 9%;
+    padding: 0;
+    margin: 0;
+    margin-top: 70px;
+}
+.screen-wrap .button-column li{
+    background: #D5D5D5;
+    border: solid 1px black;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.screen-wrap .green-slit{
+    width: 75%;
+    margin-top: 20px;
+}
+
+.screen-wrap .cash-output{
+    width: 100%;
+    border: solid 1px black;
+    background: #D5D5D5;
+    margin-top: 20px;
+}
+
+.screen-wrap .cash-output .cash-slit{
+    display: block;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #7A7977;
+    border: solid 1px black;
+    position: relative;
+}
+
+.screen-wrap .cash-output .cash-slit:after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: 22px;
+}
+
+
+.left-side .buttons-wrap {
+    display: flex;
+    justify-content: center;
+    background: #333742;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.buttons-wrap .numbers{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    margin:0;
+    padding:0;
+    max-width: 400px;
+}
+
+.buttons-wrap .numbers li{
+    width: 33.33%;
+    padding: 10px;
+}
+
+
+.buttons-wrap .numbers li span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D3D5D3;
+    border: solid 1px black;
+    padding: 10px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+.buttons-wrap .numbers li span:hover {
+    background: #ffffff;
+}
+.buttons-wrap .numbers li span:active {
+    background: #cacaca;
+    font-size: 24px;
+    border: solid 2px black;
+}
+
+.buttons-wrap .access-buttons{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons-wrap .access-buttons li{
+    padding: 10px;
+}
+
+.buttons-wrap .access-buttons li span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D3D5D3;
+    border: solid 1px black;
+    padding: 10px;
+    height: 60px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 97px;
+}
+
+.buttons-wrap .access-buttons li span.bg-red{
+    background: red;
+}
+.buttons-wrap .access-buttons li span.bg-red:hover {
+    background: #ff5e5e;
+}
+.buttons-wrap .access-buttons li span.bg-red:active {
+    background: #af0000;
+    font-size: 14px;
+}
+.buttons-wrap .access-buttons li span.bg-yellow {
+    background: #ffd400;
+}
+.buttons-wrap .access-buttons li span.bg-yellow:hover {
+    background: yellow;
+}
+.buttons-wrap .access-buttons li span.bg-yellow:active {
+    background: #b4b400;
+    font-size: 14px;
+}
+.buttons-wrap .access-buttons li span.bg-green {
+    background: green;
+}
+.buttons-wrap .access-buttons li span.bg-green:hover {
+    background: #00c300;
+}
+.buttons-wrap .access-buttons li span.bg-green:active {
+    background: #004900;
+    font-size: 14px;
+}
+
+.buttons-wrap .access-buttons #button-back span:hover{
+    background: #ffffff;
+}
+.buttons-wrap .access-buttons #button-back span:active {
+    background: #cacaca;
+    font-size: 14px;
+    border: solid 2px black;
+}
+
+.right-side{
+    width: 28%;
+    margin: 0 auto;
+}
+
+.right-side .atm-header h1{
+    color: #D1DAD4;
+    font-size: 100px;
+    line-height: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.right-side .receipt-slit{
+    margin-top: 30px;
+}
+
+.right-side .receipt-slit .green-slit{
+    margin-bottom: 30px;
+    border-left: solid 30px #131513;
+    border-right: solid 30px #131513;
+}
+
+.right-side .receipt-slit .receipt-printer{
+    display: block;
+    background: #7B7B7B;
+    height: 60px;
+    margin: 0 auto;
+    border-top: solid 20px #D5D5D5;
+    border-bottom: solid 20px #D5D5D5;
+    border-left: solid 20px #AEADAD;
+    border-right: solid 20px #AEADAD;
+}
+
+.right-side .credit-card-slit{
+    margin-top: 250px;
+}
+
+.right-side .credit-card-slit .green-slit {
+    margin-bottom: 30px;
+    border-left: solid 30px #131513;
+    border-right: solid 30px #131513;
+}
+
+.right-side .credit-card-slit .credit-card-input{
+    display: block;
+    background: #D5D5D5;
+    height: 90px;
+    border: solid 1px black;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.right-side .credit-card-slit .credit-card-input:before{
+    content: "";
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 40%;
+    height: 20px;
+    background-color: #7A7A7A;
+    z-index: 4;
+}
+
+.right-side .credit-card-slit .credit-card-input:after{
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 90%;
+    height: 20px;
+    background-color: #7A7A7A;
+    z-index: 4;
+}
+
+.right-side .credit-card-slit .credit-card-selector{
+    display: block;
+    white-space: nowrap;
+    direction: rtl;
+    position: relative;
+}
+
+.right-side .credit-card-slit .credit-card-selector .credit-card{
+    transition: .3s ease transform, .8s ease top, .8s ease left, .8s ease opacity;
+    display: inline-block;
+    width: 215px;
+    height: 300px;
+    background-image: linear-gradient(to right top, #e1c84e, #dab63c, #d3a42a, #cc9218, #c48000);
+    border-radius: 10px;
+    margin: 5px;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    direction: ltr;
+}
+
+.right-side .credit-card-slit .credit-card-selector .credit-card.active{
+    transform: rotateX(54deg);
+    position: absolute;
+    top: -140px;
+    left: 53px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.right-side .credit-card-slit .credit-card-selector .credit-card.inactive{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.right-side .credit-card-slit .credit-card-selector .credit-card:hover{
+    transform: translateY(-16px);
+}
+
+.right-side .credit-card-slit .credit-card-selector .credit-card span{
+    display: block;
+}
+
+.right-side .credit-card-slit .credit-card-selector .credit-card:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 35px;
+    height: 100%;
+    width: 35px;
+    background: black;
+    pointer-events: none;
+}
+
+.right-side .credit-card-slit .credit-card-selector .credit-card .credit-card-number{
+    display: block;
+    transform: rotate(90deg);
+    transform-origin: top;
+    position: absolute;
+    width: 100%;
+    top: 130px;
+    left: -30px;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.right-side .credit-card-slit .credit-card-selector .credit-card .credit-card-name{
+    display: block;
+    transform: rotate(90deg);
+    transform-origin: top;
+    position: absolute;
+    width: 100%;
+    top: 130px;
+    left: -60px;
+    pointer-events: none;
+}
+
+
+.green-slit{
+    display: block;
+    background: #335c3a;
+    height: 30px;
+    margin: 0 auto;
+    border-top: solid 10px #131513;
+    border-bottom: solid 10px #131513;
+    border-left: solid 60px #131513;
+    border-right: solid 60px #131513;
+}
+
+.tick{
+    animation: ticking 1s infinite ;
+}
+
+@keyframes ticking {
+    0%{
+        background: #335c3a;
+    }
+    50%{
+        background: #00ff2a;
+    }
+}
+
+.main-screen .screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.main-screen .screen.inactive{
+    display: none!important;
+}
+
+#screen-welcome{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#screen-welcome h3{
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+#screen-password{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen-password .password-error{
+    visibility: hidden;
+    margin-top: 20px;
+}
+
+#screen-password .password-error.active{
+    visibility: visible;
+}
+
+#screen-password input{
+    padding: 10px;
+    font-size: 50px;
+    max-width: 50%;
+    background: transparent;
+    color: white;
+    border: solid 2px white;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+#screen-operation{
+    padding: 30px;
+}
+
+#screen-operation h3{
+    margin-top: 0;
+    font-size: 30px;
+}
+
+#screen-operation ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#screen-operation ul li {
+    margin-bottom: 15px;
+}
+
+#screen-operation ul li a{
+    display: block;
+    width: 300px;
+    border: solid 1px white;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-left: solid 5px white;
+    position: relative;
+}
+
+#screen-operation ul li a:hover{
+    background: white;
+    color: black;
+}
+
+#screen-operation ul li a:after{
+    content: ">";
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    font-size: 26px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.operation-exit{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: block;
+    padding: 10px 25px;
+    color: white;
+    text-decoration: none;
+    border: solid 1px white;
+}
+.operation-exit:hover{
+    background: white;
+    color: black;
+}
+
+#screen-balance {
+    padding: 30px;
+}
+
+#screen-balance h3 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+#screen-balance h4 {
+    text-align: center;
+}
+
+.operation-return {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: block;
+    padding: 10px 25px;
+    color: white;
+    text-decoration: none;
+    border: solid 1px white;
+}
+
+.operation-return:hover {
+    background: white;
+    color: black;
+}
+
+#screen-balance h5 {
+    margin-top: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+#screen-deposit {
+    padding: 30px;
+}
+
+#screen-deposit h3 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+#screen-deposit h4 {
+    text-align: center;
+}
+
+#screen-deposit input {
+    display: block;
+    padding: 10px;
+    font-size: 30px;
+    max-width: 50%;
+    background: transparent;
+    color: white;
+    border: solid 2px white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#screen-deposit .new-balance{
+    text-align: center;
+}
+.new-balance--output{
+    font-size: 30px;
+}
+#screen-deposit .new-balance.inactive{
+    visibility: hidden;
+}
+
+#screen-deposit .balance-warning{
+    color: orange;
+}
+#screen-deposit .balance-warning.inactive {
+    visibility: hidden;
+}
+#screen-withdraw {
+    padding: 30px;
+}
+
+#screen-withdraw h3 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+#screen-withdraw h4 {
+    text-align: center;
+}
+
+#screen-withdraw input {
+    display: block;
+    padding: 10px;
+    font-size: 30px;
+    max-width: 50%;
+    background: transparent;
+    color: white;
+    border: solid 2px white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#screen-withdraw .new-balance {
+    text-align: center;
+}
+#screen-withdraw .new-balance.inactive {
+    visibility: hidden;
+}
+
+#screen-withdraw .balance-warning {
+    color: orange;
+}
+
+#screen-withdraw .balance-warning.inactive {
+    visibility: hidden;
+}

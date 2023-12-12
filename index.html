@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>Proyecto Cajero Automatico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-side">
+            <div class="screen-wrap">
+                <ul class="button-column">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="main-screen">
+                    <div class="screen active" id="screen-welcome">
+                        <span>Bienvenido a</span>
+                        <h3>BanCodigo</h3>
+                        <span>Inserte su tarjeta</span>
+                    </div>
+                    <div class="screen inactive" id="screen-password">
+                        <h3>Digite su contraseña:</h3>
+                        <input type="password" id="password-input" maxlength="4" onkeypress="return isNumber(event)">
+                        <span class="password-error">La contraseña no es la correcta. Intente de nuevo</span>
+                    </div>
+                    <div class="screen inactive" id="screen-operation">
+                        <h3>Operaciones</h3>
+                        <ul>
+                            <li><a href="" class="operation-check">Consultar Saldo</a></li>
+                            <li><a href="" class="operation-deposit">Ingresar Monto</a></li>
+                            <li><a href="" class="operation-withdraw">Retirar Monto</a></li>
+                        </ul>
+                        <a href="" class="operation-exit">Salir</a>
+                    </div>
+                    <div class="screen inactive" id="screen-balance">
+                        <h3>Saldo</h3>
+                        <h4>Su saldo actual es de:</h4>
+                        <h5>$0.00</h5>
+                        <a href="" class="operation-return">Atras</a>
+                    </div>
+                    <div class="screen inactive" id="screen-deposit">
+                        <h3>Depositos</h3>
+                        <h4>Teclee el monto a ingresar:</h4>
+                        <input type="text" id="money-input" onkeypress="return isNumber(event)">
+                        <div class="new-balance inactive">
+                            <h5>Su nuevo saldo es:</h5>
+                            <span class="new-balance--output"></span>
+                        </div>
+                        <div class="balance-warning inactive">
+                            <span class="balance-warning--text">Error: La cantidad ingresada excede el limite de saldo en su cuenta. Intente con otra cantidad menor.</span>
+                        </div>
+                        <a href="" class="operation-return">Atras</a>
+                    </div>
+                    <div class="screen inactive" id="screen-withdraw">
+                        <h3>Retiros</h3>
+                        <h4>Teclee el monto a retirar:</h4>
+                        <input type="text" id="money-withdraw" onkeypress="return isNumber(event)">
+                        <div class="new-balance inactive">
+                            <h5>Su nuevo saldo es:</h5>
+                            <span class="new-balance--output"></span>
+                        </div>
+                        <div class="balance-warning inactive">
+                            <span class="balance-warning--text">Error: La cantidad a retirar deja su cuenta con menos del minimo de saldo requerido. Intente con otra cantidad menor.</span>
+                        </div>
+                        <a href="" class="operation-return">Atras</a>
+                    </div>
+                </div>
+                <ul class="button-column">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <span class="green-slit"></span>
+                <div class="cash-output">
+                    <span class="cash-slit"></span>
+                </div>
+            </div>
+            <div class="buttons-wrap">
+                <ul class="numbers">
+                    <li><span>1</span></li>
+                    <li><span>2</span></li>
+                    <li><span>3</span></li>
+                    <li><span>4</span></li>
+                    <li><span>5</span></li>
+                    <li><span>6</span></li>
+                    <li><span>7</span></li>
+                    <li><span>8</span></li>
+                    <li><span>9</span></li>
+                    <li><span>0</span></li>
+                </ul>
+                <ul class="access-buttons">
+                    <li id="button-back"><span>Atras</span></li>
+                    <li id="button-erase"><span class="bg-yellow">Borrar</span></li>
+                    <li id="button-confirm"><span class="bg-green">Confirmar</span></li>
+                    <li id="button-cancel"><span class="bg-red">Salir</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="atm-header"><h1>ATM</h1></div>
+            <div class="receipt-slit">
+                <span class="green-slit"></span>
+                <span class="receipt-printer"></span>
+            </div>
+            <div class="credit-card-slit">
+                <span class="green-slit tick"></span>
+                <span class="credit-card-input"></span>
+                <div class="credit-card-selector" id="credit-card-container">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
