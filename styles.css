@@ -387,6 +387,17 @@ body{
     }
 }
 
+.main-screen:after{
+    content: "v1.0";
+    position: absolute;
+    bottom: 1px;
+    right: 5px;
+    color: white;
+    opacity: .3;
+    font-size: 12px;
+    font-family: monospace;
+}
+
 .main-screen .screen{
     position: absolute;
     top: 0;
@@ -488,7 +499,7 @@ body{
 
 .operation-exit{
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     right: 10px;
     display: block;
     padding: 10px 25px;
@@ -516,7 +527,7 @@ body{
 
 .operation-return {
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     left: 10px;
     display: block;
     padding: 10px 25px;
