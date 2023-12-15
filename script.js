@@ -35,7 +35,7 @@ var cuentas1 = {
 // Crear botones graficos para las tarjetas de cada usuario
 for (let id in cuentas1) {
 	let nuevaTarjeta = document.createElement("div");
-	nuevaTarjeta.innerHTML = '<div class="credit-card" id="'+cuentas1[id].id+'"><span class="credit-card-number">'+cuentas1[id].numero_tarjeta+'</span><span class="credit-card-name">'+cuentas1[id].nombre+" "+cuentas1[id].apellido+'</span></div>';
+	nuevaTarjeta.innerHTML = '<div class="credit-card" title="PIN: '+cuentas1[id].pin+'" id="'+cuentas1[id].id+'"><span class="credit-card-number">'+cuentas1[id].numero_tarjeta+'</span><span class="credit-card-name">'+cuentas1[id].nombre+" "+cuentas1[id].apellido+'</span></div>';
 	document.getElementById("credit-card-container").innerHTML += nuevaTarjeta.innerHTML;
 }
 
