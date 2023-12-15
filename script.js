@@ -193,22 +193,7 @@ document.querySelectorAll(".operation-return").forEach(button => {
 document.querySelector(".operation-exit").addEventListener("click", function(e){
 	e.preventDefault();
 	if(hayTarjetaAdentro){
-		console.log("exit");
-		hayTarjetaAdentro = false;
-		currentCuenta = [];
-		document.querySelector(".credit-card.active").classList.remove("active");
-		document.querySelectorAll(".credit-card.inactive").forEach(credit_card => {
-			credit_card.classList.remove("inactive");
-		});
-		clearScreens();
-		document.querySelector("#screen-balance h5").innerHTML = "";
-		document.querySelector("#screen-deposit .new-balance--output").innerHTML = "";
-		document.querySelector("#screen-deposit .balance-warning").classList.add("inactive");
-		document.querySelector("#screen-withdraw .new-balance--output").innerHTML = "";
-		document.querySelector("#screen-withdraw .balance-warning").classList.add("inactive");
-		document.getElementById("password-input").value = "";
-		document.querySelector(".password-error").classList.remove("active");
-		showScreen("screen-welcome");
+		ExitAndClear();
 	}
 });
 
@@ -216,25 +201,7 @@ document.querySelector(".operation-exit").addEventListener("click", function(e){
 document.querySelector("#button-cancel").addEventListener("click", function(e){
 	e.preventDefault();
 	if(hayTarjetaAdentro){
-		console.log("cancel operation");
-		hayTarjetaAdentro = false;
-		currentCuenta = [];
-		document.querySelector(".credit-card.active").classList.remove("active");
-		document.querySelectorAll(".credit-card.inactive").forEach(credit_card => {
-			credit_card.classList.remove("inactive");
-		});
-		document.querySelectorAll(".new-balance").forEach(element => {
-			element.classList.add("inactive");
-		});
-		clearScreens();
-		document.querySelector("#screen-balance h5").innerHTML = "";
-		document.querySelector("#screen-deposit .new-balance--output").innerHTML = "";
-		document.querySelector("#screen-deposit .balance-warning").classList.add("inactive");
-		document.querySelector("#screen-withdraw .new-balance--output").innerHTML = "";
-		document.querySelector("#screen-withdraw .balance-warning").classList.add("inactive");
-		document.querySelector(".password-error").classList.remove("active");
-		document.getElementById("password-input").value = "";
-		showScreen("screen-welcome");
+		ExitAndClear();
 	}
 });
 
@@ -281,5 +248,29 @@ function hideScreen(id_screen){
 
 function isNumber(event) {
 	return /[0-9]/i.test(event.key);
+}
+
+function ExitAndClear() {
+	console.log("exit");
+	hayTarjetaAdentro = false;
+	currentCuenta = [];
+	document.querySelector(".credit-card.active").classList.remove("active");
+	document.querySelectorAll(".credit-card.inactive").forEach(credit_card => {
+		credit_card.classList.remove("inactive");
+	});
+	document.querySelectorAll(".new-balance").forEach(element => {
+		element.classList.add("inactive");
+	});
+	clearScreens();
+	document.querySelector("#screen-balance h5").innerHTML = "";
+	document.querySelector("#screen-deposit .new-balance--output").innerHTML = "";
+	document.querySelector("#screen-deposit .balance-warning").classList.add("inactive");
+	document.querySelector("#screen-withdraw .new-balance--output").innerHTML = "";
+	document.querySelector("#screen-withdraw .balance-warning").classList.add("inactive");
+	document.querySelector(".password-error").classList.remove("active");
+	document.getElementById("password-input").value = "";
+	document.getElementById("money-input").value = "";
+	document.getElementById("money-withdraw").value = "";
+	showScreen("screen-welcome");
 }
 
