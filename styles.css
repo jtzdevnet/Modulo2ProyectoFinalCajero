@@ -388,7 +388,7 @@ body{
 }
 
 .main-screen:after{
-    content: "v1.0";
+    content: "v1.1";
     position: absolute;
     bottom: 1px;
     right: 5px;
